@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var performingMath = false;
     var decimalPressed = false;
     var equalSignPressed = false;
+    var errorMode = false;
     var operation = 0;
     
     @IBOutlet weak var label: UILabel!
@@ -34,8 +35,14 @@ class ViewController: UIViewController {
             numberOnScreen = Double(label.text!)!
             performingMath = false
         }
-        else
+        else //0-9 and Decimal pressed
         {
+            if errorMode
+            {
+                errorMode = false
+                label.text = ""
+            }
+            
             if sender.tag == 10 //0
             {
                 if label.text != "0"
@@ -43,12 +50,19 @@ class ViewController: UIViewController {
                     label.text = label.text! + "0"
                 }
             }
-            else if sender.tag == 17 //Decimal
+            else if sender.tag == 17 //Decimal pressed
             {
                 if !decimalPressed
                 {
-                    label.text = label.text! + "."
-                    decimalPressed = true
+                    if label.text == ""
+                    {
+                        label.text = "0."
+                    }
+                    else
+                    {
+                        label.text = label.text! + "."
+                        decimalPressed = true
+                    }
                 }
             }
             else //1-9
@@ -108,34 +122,50 @@ class ViewController: UIViewController {
             }
             else if sender.tag == 18 //Inverse pressed
             {
-                if label.text != "0"
+                if !errorMode
                 {
-                    if numberOnScreen > 0
+                    if label.text != "0"
                     {
-                        label.text = "– " + label.text!
-                        numberOnScreen *= -1
-                    }
-                    else
-                    {
-                        let index = label.text!.index(label.text!.startIndex, offsetBy: 2)
-                        label.text = label.text!.substring(from: index)
-                        numberOnScreen *= -1
+                        if numberOnScreen > 0
+                        {
+                            label.text = "– " + label.text!
+                            numberOnScreen *= -1
+                        }
+                        else
+                        {
+                            let index = label.text!.index(label.text!.startIndex, offsetBy: 2)
+                            label.text = label.text!.substring(from: index)
+                            numberOnScreen *= -1
+                        }
                     }
                 }
+                else
+                {
+                    label.text = "Error"
+                }
+                
                 print("Previous: " + String(previousNumber) + " Now: " + String(numberOnScreen))
             }
             else if sender.tag == 19 //Percentage pressed
             {
-                if numberOnScreen > 0
+                if !errorMode
                 {
-                    numberOnScreen /= 100
-                    label.text = String(numberOnScreen)
+                    if numberOnScreen > 0
+                    {
+                        numberOnScreen /= 100
+                        label.text = String(numberOnScreen)
+                    }
+                    else if numberOnScreen < 0
+                    {
+                        numberOnScreen /= 100
+                        label.text = String(numberOnScreen)
+                    }
                 }
-                else if numberOnScreen < 0
+                else
                 {
-                    numberOnScreen /= 100
-                    label.text = String(numberOnScreen)
+                    label.text = "Error"
                 }
+                
                 print("Previous: " + String(previousNumber) + " Now: " + String(numberOnScreen))
             }
         }
@@ -146,58 +176,135 @@ class ViewController: UIViewController {
                 equalSignPressed = true
                 if operation == 12 //Divide computed
                 {
-                    let result: Double = previousNumber / numberOnScreen
-                    label.text = resultToString(result)
-                    previousNumber = numberOnScreen
-                    numberOnScreen = result
+                    if numberOnScreen != 0
+                    {
+                        if !errorMode
+                        {
+                            let result: Double = previousNumber / numberOnScreen
+                            label.text = resultToString(result)
+                            previousNumber = numberOnScreen
+                            numberOnScreen = result
+                        }
+                        else
+                        {
+                            label.text = "Error"
+                            previousNumber = numberOnScreen
+                            numberOnScreen = 0
+                        }
+                        
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                        previousNumber = 0
+                        numberOnScreen = 0
+                        errorMode = true
+                    }
                 }
                 else if operation == 13 //Multiply computed
                 {
-                    let result: Double = previousNumber * numberOnScreen
-                    label.text = resultToString(result)
-                    previousNumber = numberOnScreen
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = previousNumber * numberOnScreen
+                        label.text = resultToString(result)
+                        previousNumber = numberOnScreen
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                        previousNumber = numberOnScreen
+                        numberOnScreen = 0
+                    }
                 }
                 else if operation == 14 //Minus computed
                 {
-                    let result: Double = previousNumber - numberOnScreen
-                    label.text = resultToString(result)
-                    previousNumber = numberOnScreen
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = previousNumber - numberOnScreen
+                        label.text = resultToString(result)
+                        previousNumber = numberOnScreen
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                        previousNumber = numberOnScreen
+                        numberOnScreen = 0
+                    }
                 }
                 else if operation == 15 //Plus computed
                 {
-                    let result: Double = previousNumber + numberOnScreen
-                    label.text = resultToString(result)
-                    previousNumber = numberOnScreen
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = previousNumber + numberOnScreen
+                        label.text = resultToString(result)
+                        previousNumber = numberOnScreen
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                        previousNumber = numberOnScreen
+                        numberOnScreen = 0
+                    }
                 }
             }
             else // equal sign has already been pressed
             {
                 if operation == 12 //Divide recomputed
                 {
-                    let result: Double = numberOnScreen / previousNumber
-                    label.text = resultToString(result)
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = numberOnScreen / previousNumber
+                        label.text = resultToString(result)
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                    }
+                    
                 }
                 else if operation == 13 //Multiply recomputed
                 {
-                    let result: Double = numberOnScreen * previousNumber
-                    label.text = resultToString(result)
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = numberOnScreen * previousNumber
+                        label.text = resultToString(result)
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                    }
                 }
                 else if operation == 14 //Minus recomputed
                 {
-                    let result: Double = numberOnScreen - previousNumber
-                    label.text = resultToString(result)
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = numberOnScreen - previousNumber
+                        label.text = resultToString(result)
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                    }
                 }
                 else if operation == 15 //Plus recomputed
                 {
-                    let result: Double = numberOnScreen + previousNumber
-                    label.text = resultToString(result)
-                    numberOnScreen = result
+                    if !errorMode
+                    {
+                        let result: Double = numberOnScreen + previousNumber
+                        label.text = resultToString(result)
+                        numberOnScreen = result
+                    }
+                    else
+                    {
+                        label.text = "Error"
+                    }
+                    
                 }
             }
             print("Previous: " + String(previousNumber) + " Now: " + String(numberOnScreen))
@@ -208,9 +315,10 @@ class ViewController: UIViewController {
             previousNumber = 0
             numberOnScreen = 0
             operation = 0
-            performingMath = false;
-            decimalPressed = false;
-            equalSignPressed = false;
+            performingMath = false
+            decimalPressed = false
+            equalSignPressed = false
+            errorMode = false
             print("Previous: " + String(previousNumber) + " Now: " + String(numberOnScreen))
         }
     }
