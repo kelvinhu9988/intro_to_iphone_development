@@ -5,4 +5,6 @@ The repo is created for my intro course in iPhone development. The repo up to no
 <img src="./Calculator/Demo.png" width="480">
 
 - Graphing Calculator
-<video src="./GraphingCalculator/Demo.mp4" width="320" height="240">
+<figure class="video_container">
+<iframe src="https://giphy.com/embed/gJEryowQkCapW" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</figure>
