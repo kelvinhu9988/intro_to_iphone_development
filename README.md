@@ -2,7 +2,7 @@
 
 The repo is created for my intro course in iPhone development. The repo up to now contains the following iPhone projects:
 - Calculator
-<img src="./Calculator/Demo.png" width="320" height="240">
+<img src="./Calculator/Demo.png" width="480">
 
 - Graphing Calculator
 <video src="./GraphingCalculator/Demo.mp4" width="320" height="240">
