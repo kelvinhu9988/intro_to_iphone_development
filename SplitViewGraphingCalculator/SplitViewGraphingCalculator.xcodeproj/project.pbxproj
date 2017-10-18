@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65883BE21F734A2F00F9C1F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65883BE11F734A2F00F9C1F9 /* AppDelegate.swift */; };
+		65883BE71F734A2F00F9C1F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65883BE51F734A2F00F9C1F9 /* Main.storyboard */; };
+		65883BE91F734A2F00F9C1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65883BE81F734A2F00F9C1F9 /* Assets.xcassets */; };
+		65883BEC1F734A2F00F9C1F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65883BEA1F734A2F00F9C1F9 /* LaunchScreen.storyboard */; };
+		65883BF51F734B0600F9C1F9 /* FunctionPlottingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65883BF31F734B0600F9C1F9 /* FunctionPlottingView.swift */; };
+		65883BF61F734B0600F9C1F9 /* FunctionPlottingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65883BF41F734B0600F9C1F9 /* FunctionPlottingViewController.swift */; };
+		65C4135F1F76D15500B08754 /* funcTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4135E1F76D15500B08754 /* funcTableViewController.swift */; };
+		65C413611F76DA8100B08754 /* FunctionsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C413601F76DA8100B08754 /* FunctionsDB.swift */; };
+		65C413631F76EEB000B08754 /* funcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C413621F76EEB000B08754 /* funcTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65883BDE1F734A2F00F9C1F9 /* SplitViewGraphingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewGraphingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65883BE11F734A2F00F9C1F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65883BE61F734A2F00F9C1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65883BE81F734A2F00F9C1F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65883BEB1F734A2F00F9C1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65883BED1F734A2F00F9C1F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65883BF31F734B0600F9C1F9 /* FunctionPlottingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionPlottingView.swift; sourceTree = "<group>"; };
+		65883BF41F734B0600F9C1F9 /* FunctionPlottingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionPlottingViewController.swift; sourceTree = "<group>"; };
+		65C4135E1F76D15500B08754 /* funcTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcTableViewController.swift; sourceTree = "<group>"; };
+		65C413601F76DA8100B08754 /* FunctionsDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsDB.swift; sourceTree = "<group>"; };
+		65C413621F76EEB000B08754 /* funcTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65883BDB1F734A2F00F9C1F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65883BD51F734A2F00F9C1F9 = {
+			isa = PBXGroup;
+			children = (
+				65883BE01F734A2F00F9C1F9 /* SplitViewGraphingCalculator */,
+				65883BDF1F734A2F00F9C1F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65883BDF1F734A2F00F9C1F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65883BDE1F734A2F00F9C1F9 /* SplitViewGraphingCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65883BE01F734A2F00F9C1F9 /* SplitViewGraphingCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				65883BE51F734A2F00F9C1F9 /* Main.storyboard */,
+				65C413621F76EEB000B08754 /* funcTableViewCell.swift */,
+				65C4135E1F76D15500B08754 /* funcTableViewController.swift */,
+				65C413601F76DA8100B08754 /* FunctionsDB.swift */,
+				65883BF41F734B0600F9C1F9 /* FunctionPlottingViewController.swift */,
+				65C4135D1F76CEDD00B08754 /* Stuff */,
+			);
+			path = SplitViewGraphingCalculator;
+			sourceTree = "<group>";
+		};
+		65C4135D1F76CEDD00B08754 /* Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				65883BF31F734B0600F9C1F9 /* FunctionPlottingView.swift */,
+				65883BE81F734A2F00F9C1F9 /* Assets.xcassets */,
+				65883BEA1F734A2F00F9C1F9 /* LaunchScreen.storyboard */,
+				65883BED1F734A2F00F9C1F9 /* Info.plist */,
+				65883BE11F734A2F00F9C1F9 /* AppDelegate.swift */,
+			);
+			name = Stuff;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65883BDD1F734A2F00F9C1F9 /* SplitViewGraphingCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65883BF01F734A2F00F9C1F9 /* Build configuration list for PBXNativeTarget "SplitViewGraphingCalculator" */;
+			buildPhases = (
+				65883BDA1F734A2F00F9C1F9 /* Sources */,
+				65883BDB1F734A2F00F9C1F9 /* Frameworks */,
+				65883BDC1F734A2F00F9C1F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplitViewGraphingCalculator;
+			productName = GraphingCalculator2;
+			productReference = 65883BDE1F734A2F00F9C1F9 /* SplitViewGraphingCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65883BD61F734A2F00F9C1F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CS2048;
+				TargetAttributes = {
+					65883BDD1F734A2F00F9C1F9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6HQGE2JU55;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 65883BD91F734A2F00F9C1F9 /* Build configuration list for PBXProject "SplitViewGraphingCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65883BD51F734A2F00F9C1F9;
+			productRefGroup = 65883BDF1F734A2F00F9C1F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65883BDD1F734A2F00F9C1F9 /* SplitViewGraphingCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65883BDC1F734A2F00F9C1F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65883BEC1F734A2F00F9C1F9 /* LaunchScreen.storyboard in Resources */,
+				65883BE91F734A2F00F9C1F9 /* Assets.xcassets in Resources */,
+				65883BE71F734A2F00F9C1F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65883BDA1F734A2F00F9C1F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65883BF61F734B0600F9C1F9 /* FunctionPlottingViewController.swift in Sources */,
+				65883BE21F734A2F00F9C1F9 /* AppDelegate.swift in Sources */,
+				65883BF51F734B0600F9C1F9 /* FunctionPlottingView.swift in Sources */,
+				65C413631F76EEB000B08754 /* funcTableViewCell.swift in Sources */,
+				65C413611F76DA8100B08754 /* FunctionsDB.swift in Sources */,
+				65C4135F1F76D15500B08754 /* funcTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65883BE51F734A2F00F9C1F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65883BE61F734A2F00F9C1F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65883BEA1F734A2F00F9C1F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65883BEB1F734A2F00F9C1F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65883BEE1F734A2F00F9C1F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65883BEF1F734A2F00F9C1F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65883BF11F734A2F00F9C1F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HQGE2JU55;
+				INFOPLIST_FILE = "$(SRCROOT)/SplitViewGraphingCalculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cornell-University.GraphingCalculator2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		65883BF21F734A2F00F9C1F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HQGE2JU55;
+				INFOPLIST_FILE = "$(SRCROOT)/SplitViewGraphingCalculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cornell-University.GraphingCalculator2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65883BD91F734A2F00F9C1F9 /* Build configuration list for PBXProject "SplitViewGraphingCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65883BEE1F734A2F00F9C1F9 /* Debug */,
+				65883BEF1F734A2F00F9C1F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65883BF01F734A2F00F9C1F9 /* Build configuration list for PBXNativeTarget "SplitViewGraphingCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65883BF11F734A2F00F9C1F9 /* Debug */,
+				65883BF21F734A2F00F9C1F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65883BD61F734A2F00F9C1F9 /* Project object */;
+}

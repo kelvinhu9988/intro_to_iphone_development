@@ -8,3 +8,7 @@ The repo is created for my intro course in iPhone development, and up to now it 
 - Graphing Calculator
 
 <center><img src="./GraphingCalculator/Demo.png" width="600"></center>
+
+- Split View Graphing Calculator
+
+<center><img src="./SplitViewGraphingCalculator/Demo.png" width="600"></center>
